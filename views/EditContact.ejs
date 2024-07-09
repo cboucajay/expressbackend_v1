@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Contact</title>
+</head>
+<body>
+    <h3>Mise à jour</h3>
+    <h2><%= plus %></h2>
+    <form action="/updatecontact?_method=PUT" method="post">
+        <label for="nom">Nom</label>
+        <input type="text" id="nom" name="nom" value="<%= dataEdit.nom %>">
+        <label for="prenom">Prénom</label>
+        <input type="text" id="prenom" name="prenom" value="<%= dataEdit.prenom %>">
+        <label for="email">Email</label>
+        <input type="text" id="email" name="email" value="<%= dataEdit.email %>">
+        <label for="msg">Message</label>
+        <textarea name="msg" id="msg"><%= dataEdit.message %></textarea>
+        <input type="hidden" name="identifiant" value="<%= dataEdit._id %>">
+        <!-- <input type="hidden" name="_method" value="PUT"> -->
+        <input type="submit" value="Envoyer">
+    </form>  
+
+    <h3>Suppression de la donnée</h3>
+    <form action="/deletecontact?_method=DELETE" method="post">
+        <input type="hidden" name="identifiant" value="<%= dataEdit._id %>">
+        <input type="submit" value="Supprimer la donnée">
+    </form>
+</body>
+</html>

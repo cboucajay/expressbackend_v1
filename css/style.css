@@ -1,0 +1,24 @@
+
+main .container {
+    text-align: center;
+}
+
+header {
+    padding-bottom: 50px;
+}
+
+.CardsContainer {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.boutons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-body {
+    text-align: left;
+}
